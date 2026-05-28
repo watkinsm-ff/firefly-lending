@@ -1,0 +1,1368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Firefly Lending | Private Capital for Real Estate Investors&lt;/title&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Mono:wght@300;400;500&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--black: #0a0a08;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--deep: #111209;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--gold: #e8b84b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--gold-dim: #c9973a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--gold-pale: #f5e6b8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--ember: #d4622a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--cream: #f7f3ea;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--muted: #8a8577;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--border: rgba(232, 184, 75, 0.18);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--border-strong: rgba(232, 184, 75, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--glass: rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>html { scroll-behavior: smooth; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Outfit', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- FIREFLY PARTICLES ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#particles {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ff {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 0 6px 2px rgba(232,184,75,0.7), 0 0 12px 4px rgba(232,184,75,0.3);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation: ffloat var(--dur) ease-in-out infinite, ffglow var(--glow) ease-in-out infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@keyframes ffloat {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>0% <span class="Apple-converted-space">  </span>{ transform: translate(0, 0); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>10%<span class="Apple-converted-space">  </span>{ opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>50%<span class="Apple-converted-space">  </span>{ transform: translate(var(--dx), var(--dy)); opacity: 0.9; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>90%<span class="Apple-converted-space">  </span>{ opacity: 0.4; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>100% { transform: translate(calc(var(--dx)*1.8), calc(var(--dy)*1.6)); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@keyframes ffglow {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>0%, 100% { box-shadow: 0 0 4px 1px rgba(232,184,75,0.5); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>50% <span class="Apple-converted-space">      </span>{ box-shadow: 0 0 10px 4px rgba(232,184,75,0.9), 0 0 20px 8px rgba(232,184,75,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- LAYOUT ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.wrap {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 980px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0 32px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- HEADER ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 80px 0 60px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-mark {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-glyph {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-glyph svg { width: 100%; height: 100%; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-text {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.12em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.logo-text span {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0.7;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: clamp(38px, 6vw, 64px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: -0.01em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>h1 em {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tagline {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.22em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.header-cta {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 14px 36px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.18em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.header-cta:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- SECTIONS ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 72px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.25em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-label::after {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--border-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 60px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: clamp(28px, 4vw, 42px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.2;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- ABOUT ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: start;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 680px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.about-grid { grid-template-columns: 1fr; gap: 32px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-bio p {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(247,243,234,0.75);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.about-bio strong {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.credential-list {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>list-style: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.credential-list li {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(247,243,234,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.credential-list li::before {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content: '◆';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- TERMS GRID ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.terms-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 680px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.terms-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-card {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--glass);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 28px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: border-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-card:hover { border-color: var(--border-strong); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-card::before {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0; left: 0; right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: linear-gradient(90deg, transparent, var(--gold), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: opacity 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-card:hover::before { opacity: 1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.2em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-value {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.term-note {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- COLLATERAL / CRITERIA ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-rows {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 200px 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: background 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-row:last-child { border-bottom: none; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-row:hover { background: var(--glass); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-key {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.1em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-right: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.criteria-val {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(247,243,234,0.75);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 560px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.criteria-row { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.criteria-key { border-right: none; border-bottom: 1px solid var(--border); padding: 14px 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.criteria-val { padding: 14px 16px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- PREPAYMENT NOTICE ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.notice-box {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-left: 2px solid var(--ember);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(212, 98, 42, 0.06);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(247,243,234,0.65);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.7;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.notice-box strong {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--ember);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- FORM SECTION ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>#apply {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 72px 0 100px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-intro {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 560px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(247,243,234,0.65);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 640px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-group.full { grid-column: 1 / -1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.2em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input, select, textarea {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(255,255,255,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Outfit', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: border-color 0.25s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>select {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8577' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-repeat: no-repeat;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-position: right 14px center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-right: 36px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>select option { background: #1a1a14; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input:focus, select:focus, textarea:focus {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(232,184,75,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input::placeholder, textarea::placeholder {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(138,133,119,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>textarea {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>resize: vertical;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-height: 100px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- RANGE SLIDERS ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.slider-group {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.slider-header {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: baseline;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.slider-val {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type="range"] {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 6px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type="range"]::-webkit-slider-runnable-track {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--border-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type="range"]::-webkit-slider-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: -7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 0 8px rgba(232,184,75,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: box-shadow 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type="range"]:hover::-webkit-slider-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 0 14px rgba(232,184,75,0.8);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type="range"]::-moz-range-track {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--border-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type="range"]::-moz-range-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- PAYMENT PREVIEW ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.payment-preview {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-column: 1 / -1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(232,184,75,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.payment-preview::before {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0; left: 0; right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: linear-gradient(90deg, transparent, var(--gold), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.preview-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.22em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.preview-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.preview-item { display: flex; flex-direction: column; gap: 4px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.preview-item-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.18em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.preview-item-value {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 400;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.preview-item-value.small {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(247,243,234,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prepay-warning {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-top: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-top: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.prepay-warning strong { color: var(--ember); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- SUBMIT ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.submit-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-column: 1 / -1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-submit {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 16px 48px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.2em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-submit:hover { background: var(--gold-pale); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.btn-submit:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.form-note {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- STATUS MESSAGES ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.status-msg {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-column: 1 / -1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 16px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.status-msg.success {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid rgba(100, 200, 120, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(100, 200, 120, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #8dd4a0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.status-msg.error {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid rgba(212, 98, 42, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(212, 98, 42, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--ember);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- FOOTER ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 40px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-logo {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'Cormorant Garamond', serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 300;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.15em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.footer-disc {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: rgba(138,133,119,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.7;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- DIVIDER ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.gold-line {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0.5;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* ---- ANIMATIONS ---- */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.fade-in {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: translateY(18px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: opacity 0.7s ease, transform 0.7s ease;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.fade-in.visible {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>/* radio style */</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.radio-group {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.radio-group label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: 'DM Mono', monospace;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.1em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.radio-group input[type="radio"] {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.radio-group input[type="radio"]:checked + label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: rgba(232,184,75,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.radio-group label:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: var(--border-strong);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--cream);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Firefly particles --&gt;</p>
+<p class="p1">&lt;div id="particles"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- HEADER --&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="logo-mark"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo-glyph"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;circle cx="22" cy="22" r="20" stroke="#e8b84b" stroke-width="1" opacity="0.4"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M22 8 C22 8 28 16 22 22 C16 28 22 36 22 36" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;circle cx="22" cy="22" r="3" fill="#e8b84b" opacity="0.9"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;circle cx="22" cy="22" r="5" fill="#e8b84b" opacity="0.2"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M14 14 L22 22 M30 14 L22 22" stroke="#e8b84b" stroke-width="1" stroke-linecap="round" opacity="0.5"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo-text"&gt;Firefly &lt;span&gt;Lending&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Private Capital&lt;br&gt;for &lt;em&gt;Real Deals&lt;/em&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="tagline"&gt;Winston-Salem, NC &amp;nbsp;·&amp;nbsp; Private Real Estate Lending &amp;nbsp;·&amp;nbsp; Mark Watkins&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#apply" class="header-cta"&gt;Submit a Deal Inquiry&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ABOUT --&gt;</p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;About the Lender&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="about-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="about-bio fade-in"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Mark Watkins&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="gold-line" style="margin: 0 0 24px;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;I am a private lender and real estate investor based in Winston-Salem, North Carolina. My investing career has been built through active real estate acquisition, and my lending capital is funded through a self-directed retirement account accumulated entirely through real estate returns.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;I am not a bank, a fund, or an institution. I am an individual investor who understands the mechanics of a deal, evaluates each opportunity on its own merits, and moves quickly when the numbers make sense.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;I have served on the board of the local REIA and have been part of this investor community for years. I lend to people, not just deals.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="fade-in" style="transition-delay: 0.15s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul class="credential-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Self-directed IRA funded through active real estate investing&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Experience with fix-and-flip, buy-and-hold, and wholesale acquisitions&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Former board member, Winston-Salem REIA&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Generates promissory notes and amortization schedules in-house&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Assists borrowers with payment setup and loan servicing&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Evaluates each deal independently, including property position and margin&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Fast turnaround with no institutional red tape&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;Lending focus: rehab loans, bridge financing, light rehab for BRRRR&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- LENDING TERMS --&gt;</p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Lending Parameters&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Terms at a Glance&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color: rgba(247,243,234,0.6); font-size: 14px; margin-bottom: 8px;"&gt;All terms are deal-dependent. The ranges below represent typical parameters. Final terms are determined after independent deal evaluation.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="terms-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="term-card fade-in"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-label"&gt;Interest Rate&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-value"&gt;8–12%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-note"&gt;Annualized. Rate scales with loan-to-value, term length, and collateral position.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="term-card fade-in" style="transition-delay:0.1s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-label"&gt;Loan Term&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-value"&gt;6–24 mo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-note"&gt;Shorter terms carry higher rates. Longer terms may qualify for rate relief.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="term-card fade-in" style="transition-delay:0.2s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-label"&gt;Origination Points&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-value"&gt;2 pts&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-note"&gt;Typically 1 point at origination, 1 point at payoff. Adjustable by deal structure.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="term-card fade-in" style="transition-delay:0.3s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-label"&gt;Loan Amount&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-value"&gt;Up to $42K&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-note"&gt;Suitable for bridge loans, rehab draws, and light BRRRR financing.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="term-card fade-in" style="transition-delay:0.4s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-label"&gt;Payment Types&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-value" style="font-size:20px; padding-top:4px;"&gt;P&amp;amp;I / I/O&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-note"&gt;Principal and interest, or interest-only with balloon. Structured to fit your exit.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="term-card fade-in" style="transition-delay:0.5s;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-label"&gt;Collateral&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-value" style="font-size:20px; padding-top:4px;"&gt;1st Lien&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="term-note"&gt;First lien position preferred. Second position considered case-by-case with adjusted terms.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="notice-box" style="margin-top: 28px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Prepayment Policy:&lt;/strong&gt; Loans paid off within 75% of the agreed term are subject to a prepayment penalty. The penalty is structured so that early payoff does not reduce the lender's return below a meaningful threshold. This protects the cost of capital for both parties. Specific penalty terms are disclosed at closing.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- COLLATERAL CRITERIA --&gt;</p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Collateral &amp;amp; Deal Criteria&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;What I Look For&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="criteria-rows"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="criteria-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-key"&gt;Property Type&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-val"&gt;Residential real estate. Single-family preferred. Multifamily considered on a case-by-case basis.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="criteria-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-key"&gt;Lien Position&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-val"&gt;First lien is the default. Second lien considered where sufficient equity exists, with rate and term adjustments to reflect added risk.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="criteria-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-key"&gt;Loan Purpose&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-val"&gt;Fix-and-flip rehab, bridge financing for closing, light rehab for buy-and-hold or BRRRR strategy.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="criteria-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-key"&gt;Loan-to-Value&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-val"&gt;Deal margin is independently evaluated. Strong equity coverage improves rate eligibility and approval likelihood.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="criteria-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-key"&gt;Exit Strategy&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-val"&gt;Clear, realistic exit required. Sale, refinance, or stabilized hold all acceptable. Timeline must align with loan term.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="criteria-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-key"&gt;Borrower Profile&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="criteria-val"&gt;New and experienced investors considered. Experience level factors into rate. Character and communication matter.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- INQUIRY FORM --&gt;</p>
+<p class="p1">&lt;section id="apply" style="border-bottom: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Deal Inquiry&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Submit Your Deal&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="form-intro"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Fill out the form below and I will review your inquiry personally. All submissions are confidential. I typically respond within 48 hours. If you have an urgent timeline, note it in the deal description.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-grid" id="inquiryForm"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Contact --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="name"&gt;Full Name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="name" placeholder="Your name" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="email"&gt;Email Address&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="email" id="email" placeholder="you@email.com" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="phone"&gt;Phone Number&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="tel" id="phone" placeholder="(336) 555-0100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="experience"&gt;Investing Experience&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="experience"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value=""&gt;Select one&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="first-deal"&gt;First deal / just getting started&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="1-3"&gt;1–3 completed deals&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="4-10"&gt;4–10 completed deals&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="10+"&gt;10+ completed deals&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Property --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="property"&gt;Property Address or General Area&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="property" placeholder="123 Main St, Winston-Salem NC — or — East Winston area, SFR"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="prop_type"&gt;Property Type&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="prop_type"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value=""&gt;Select one&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="sfr"&gt;Single-Family Residential&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="duplex"&gt;Duplex&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="multifamily"&gt;Multifamily (3+ units)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="other"&gt;Other&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="purchase_price"&gt;Purchase Price / Current Value&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="purchase_price" placeholder="$85,000"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="arv"&gt;After Repair Value (ARV)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="arv" placeholder="$140,000 — if applicable"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="exit_strategy"&gt;Exit Strategy&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="exit_strategy"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value=""&gt;Select one&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="sell"&gt;Sell after rehab&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="refinance"&gt;Refinance into long-term debt&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="hold"&gt;Hold as rental&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="brrrr"&gt;BRRRR&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="other"&gt;Other&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Loan Terms - Sliders --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slider-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="slider-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Loan Amount Requested&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="slider-val" id="amtVal"&gt;$25,000&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="range" id="loanAmt" min="5000" max="42000" step="1000" value="25000"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slider-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="slider-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Applicable Interest Rate&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="slider-val" id="rateVal"&gt;10.0%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="display:flex; align-items:center; gap:12px; padding: 8px 0 4px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="flex:1; height:2px; background: var(--border-strong); border-radius:1px; position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div id="rateTrackFill" style="position:absolute; left:0; top:0; height:100%; background:var(--gold); border-radius:1px; transition: width 0.3s;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div id="rateThumb" style="position:absolute; top:50%; width:16px; height:16px; border-radius:50%; background:var(--gold); transform:translate(-50%,-50%); box-shadow:0 0 8px rgba(232,184,75,0.5); transition: left 0.3s; pointer-events:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.15em; color:var(--muted); margin-top:4px;"&gt;AUTO-SET · Based on loan amount and term&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slider-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="slider-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;Desired Term&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="slider-val" id="termVal"&gt;12 mo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="range" id="loanTerm" min="6" max="24" step="1" value="12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label style="margin-bottom: 10px;"&gt;Payment Type&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="radio-group" id="paymentType"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="radio" name="ptype" id="pt_pni" value="pni" checked&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label for="pt_pni"&gt;P&amp;amp;I (Amortizing)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;input type="radio" name="ptype" id="pt_io" value="io"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;label for="pt_io"&gt;Interest Only + Balloon&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="lien_pos"&gt;Requested Lien Position&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="lien_pos"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="first"&gt;First Lien&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="second"&gt;Second Lien&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="other_lenders"&gt;Currently Working With Other Lenders?&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="other_lenders"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="no"&gt;No&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="yes"&gt;Yes&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="maybe"&gt;Evaluating options&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- LIVE PAYMENT PREVIEW --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="payment-preview fade-in"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="preview-label"&gt;Estimated Payment Preview &amp;nbsp;·&amp;nbsp; Illustrative Only &amp;nbsp;·&amp;nbsp; Final Terms Set at Closing&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="preview-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="preview-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-label"&gt;Monthly Payment&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-value" id="prev_monthly"&gt;$--&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="preview-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-label" id="prev_balloon_label"&gt;Balloon at Maturity&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-value small" id="prev_balloon"&gt;N/A&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="preview-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-label"&gt;Total Interest&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-value small" id="prev_interest"&gt;$--&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="preview-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-label"&gt;Est. Points (2 pts)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-value small" id="prev_points"&gt;$--&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="preview-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-label"&gt;Total Cost of Capital&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="preview-item-value small" id="prev_total"&gt;$--&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prepay-warning" id="prepayWarning"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Deal description --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="deal_desc"&gt;Deal Description&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;textarea id="deal_desc" placeholder="Briefly describe the deal — what you're buying, what the plan is, why the numbers work, and your timeline."&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="form-group full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="timeline"&gt;Funding Timeline Needed&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="timeline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value=""&gt;Select one&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="asap"&gt;ASAP / under 1 week&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="1-2wk"&gt;1–2 weeks&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="2-4wk"&gt;2–4 weeks&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="flexible"&gt;Flexible / planning ahead&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Honeypot: hidden from real users, bots will fill it --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="position:absolute; left:-9999px; top:-9999px; opacity:0; pointer-events:none;" aria-hidden="true"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="website"&gt;Website&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="website" name="website" tabindex="-1" autocomplete="off"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="status-msg" id="statusMsg"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="submit-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn-submit" id="submitBtn" onclick="handleSubmit()"&gt;Submit Inquiry&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="form-note"&gt;Your information is shared only with Mark Watkins and is not sold or distributed. All inquiries are reviewed personally.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FOOTER --&gt;</p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-logo"&gt;Firefly Lending&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="footer-disc"&gt;Firefly Lending is a private individual lender. This is not an offer of securities. All lending is subject to independent deal review and applicable law. Winston-Salem, North Carolina.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// ---- FIREFLY PARTICLES ----</p>
+<p class="p1">(function() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const container = document.getElementById('particles');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const count = 28;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for (let i = 0; i &lt; count; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const ff = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ff.className = 'ff';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const x = Math.random() * 100;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const y = Math.random() * 100;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dx = (Math.random() - 0.5) * 120;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dy = -(Math.random() * 80 + 40);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dur = (Math.random() * 8 + 6) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const glow = (Math.random() * 3 + 2) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const delay = (Math.random() * 10) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ff.style.cssText = `left:${x}%;top:${y}%;--dx:${dx}px;--dy:${dy}px;--dur:${dur};--glow:${glow};animation-delay:${delay};`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>container.appendChild(ff);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">})();</p>
+<p class="p2"><br></p>
+<p class="p1">// ---- FADE IN ON SCROLL ----</p>
+<p class="p1">const fadeEls = document.querySelectorAll('.fade-in');</p>
+<p class="p1">const observer = new IntersectionObserver((entries) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>entries.forEach(e =&gt; { if (e.isIntersecting) { e.target.classList.add('visible'); } });</p>
+<p class="p1">}, { threshold: 0.1 });</p>
+<p class="p1">fadeEls.forEach(el =&gt; observer.observe(el));</p>
+<p class="p2"><br></p>
+<p class="p1">// ---- PAYMENT CALCULATOR ----</p>
+<p class="p1">function fmt(n) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return '$' + Math.round(n).toLocaleString('en-US');</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function calcRate(amt, term) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Equal 50/50 weight between term and amount</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Short term (6mo) and small amount ($5K) both push toward 12%</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Long term (24mo) and large amount ($42K) both push toward 8%</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const termPremium<span class="Apple-converted-space">  </span>= ((24 - term) / 18) * 2;<span class="Apple-converted-space">          </span>// 0–2%</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const amtPremium <span class="Apple-converted-space">  </span>= ((42000 - amt) / 37000) * 2; <span class="Apple-converted-space">    </span>// 0–2%</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const raw = 8 + termPremium + amtPremium;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return Math.min(12, Math.max(8, Math.round(raw * 4) / 4)); // round to nearest 0.25, cap 8-12</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updatePreview() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const amt = parseFloat(document.getElementById('loanAmt').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const term = parseInt(document.getElementById('loanTerm').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ptype = document.querySelector('input[name="ptype"]:checked').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rate = calcRate(amt, term);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('amtVal').textContent = fmt(amt);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('rateVal').textContent = rate.toFixed(2) + '%';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('termVal').textContent = term + ' mo';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Update the visual rate track</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const pct = ((rate - 8) / 4) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fill = document.getElementById('rateTrackFill');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const thumb = document.getElementById('rateThumb');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (fill) fill.style.width = pct + '%';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (thumb) thumb.style.left = pct + '%';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const monthlyRate = rate / 100 / 12;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const points = amt * 0.02;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let monthly, totalInterest, balloon;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (ptype === 'pni') {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Standard amortizing</p>
+<p class="p1"><span class="Apple-converted-space">    </span>monthly = amt * (monthlyRate * Math.pow(1 + monthlyRate, term)) / (Math.pow(1 + monthlyRate, term) - 1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>totalInterest = (monthly * term) - amt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>balloon = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('prev_balloon_label').textContent = 'Balloon at Maturity';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('prev_balloon').textContent = 'None';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Interest only + balloon</p>
+<p class="p1"><span class="Apple-converted-space">    </span>monthly = amt * monthlyRate;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>totalInterest = monthly * term;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>balloon = amt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('prev_balloon_label').textContent = 'Balloon at Maturity';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('prev_balloon').textContent = fmt(balloon);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const totalCost = totalInterest + points;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('prev_monthly').textContent = fmt(monthly) + '/mo';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('prev_interest').textContent = fmt(totalInterest);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('prev_points').textContent = fmt(points);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('prev_total').textContent = fmt(totalCost);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Prepayment warning</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const threshold = Math.floor(term * 0.75);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const penaltyMonths = threshold;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const penaltyInterest = ptype === 'pni'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>? (monthly * penaltyMonths - amt * (1 - Math.pow(1 + monthlyRate, -term) / Math.pow(1 + monthlyRate, penaltyMonths - term)))</p>
+<p class="p1"><span class="Apple-converted-space">    </span>: monthly * penaltyMonths;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const penaltyAmt = amt * 0.02;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('prepayWarning').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`&lt;strong&gt;Prepayment Note:&lt;/strong&gt; If this loan is paid off before month ${threshold} of ${term} (75% of term), a prepayment penalty applies. Penalty is calculated as interest due through month ${threshold}, plus an additional 2% of outstanding principal. Early payoff does not reduce the lender's return below minimum yield expectations.`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">['loanAmt','loanTerm'].forEach(id =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).addEventListener('input', updatePreview);</p>
+<p class="p1">});</p>
+<p class="p1">document.querySelectorAll('input[name="ptype"]').forEach(r =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>r.addEventListener('change', updatePreview);</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">updatePreview();</p>
+<p class="p2"><br></p>
+<p class="p1">// ---- FORM SUBMISSION ----</p>
+<p class="p1">async function handleSubmit() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Honeypot check — bots fill this, humans don't</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (document.getElementById('website').value) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btn = document.getElementById('submitBtn');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const status = document.getElementById('statusMsg');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>status.className = 'status-msg';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>status.style.display = 'none';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Gather fields</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const name = document.getElementById('name').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const email = document.getElementById('email').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const phone = document.getElementById('phone').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const experience = document.getElementById('experience').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const property = document.getElementById('property').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const prop_type = document.getElementById('prop_type').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const purchase_price = document.getElementById('purchase_price').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const arv = document.getElementById('arv').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const exit_strategy = document.getElementById('exit_strategy').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const loanAmt = document.getElementById('loanAmt').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const loanTerm = document.getElementById('loanTerm').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const paymentType = document.querySelector('input[name="ptype"]:checked').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const lien_pos = document.getElementById('lien_pos').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const other_lenders = document.getElementById('other_lenders').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const deal_desc = document.getElementById('deal_desc').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const timeline = document.getElementById('timeline').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!name || !email) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'status-msg error';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.textContent = 'Please provide your name and email address.';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.textContent = 'Sending...';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Compute payment preview values for email</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const amt = parseFloat(loanAmt);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rate = calcRate(amt, parseInt(loanTerm));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rateMonthly = rate / 100 / 12;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const term = parseInt(loanTerm);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let monthly;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (paymentType === 'pni') {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>monthly = amt * (rateMonthly * Math.pow(1 + rateMonthly, term)) / (Math.pow(1 + rateMonthly, term) - 1);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>monthly = amt * rateMonthly;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const totalInterest = paymentType === 'pni' ? (monthly * term - amt) : monthly * term;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const points = amt * 0.02;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const summaryPrompt = `You are an assistant helping a private lender named Mark Watkins screen deal inquiries for his lending business, Firefly Lending.</p>
+<p class="p2"><br></p>
+<p class="p1">A borrower has submitted a deal inquiry. Provide a brief, professional 3-4 sentence plain-language summary of the deal for Mark to quickly triage. Note any obvious strengths, concerns, or missing information. Be direct and useful.</p>
+<p class="p2"><br></p>
+<p class="p1">Inquiry data:</p>
+<p class="p1">- Borrower: ${name}, ${email}, ${phone}</p>
+<p class="p1">- Experience: ${experience}</p>
+<p class="p1">- Property: ${property} (${prop_type})</p>
+<p class="p1">- Purchase price: ${purchase_price}, ARV: ${arv}</p>
+<p class="p1">- Exit: ${exit_strategy}</p>
+<p class="p1">- Loan requested: $${amt.toLocaleString()} at ${rate.toFixed(2)}% for ${loanTerm} months (${paymentType === 'pni' ? 'P&amp;I' : 'Interest Only + Balloon'})</p>
+<p class="p1">- Lien: ${lien_pos}, Other lenders: ${other_lenders}</p>
+<p class="p1">- Timeline: ${timeline}</p>
+<p class="p1">- Deal description: ${deal_desc || 'Not provided'}</p>
+<p class="p1">- Est. monthly payment: $${Math.round(monthly).toLocaleString()}, total interest: $${Math.round(totalInterest).toLocaleString()}, points: $${Math.round(points).toLocaleString()}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Also generate a borrower-facing preliminary response</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const borrowerPrompt = `You are writing a brief, warm but professional acknowledgment on behalf of Mark Watkins at Firefly Lending, a private real estate lender in Winston-Salem, NC.</p>
+<p class="p2"><br></p>
+<p class="p1">A borrower just submitted a deal inquiry. Write 2-3 short paragraphs acknowledging receipt, giving a preliminary read on whether the deal appears to fall within general lending parameters (do NOT commit to approval — always state that final approval is subject to independent underwriting review by the lender), and a clear next step.<span class="Apple-converted-space"> </span></p>
+<p class="p2"><br></p>
+<p class="p1">Keep the tone personal and professional. Never use the word "straightforward". Never promise funding. Always end with a disclaimer that all inquiries are subject to final review and approval at the sole discretion of the lender.</p>
+<p class="p2"><br></p>
+<p class="p1">Borrower name: ${name}</p>
+<p class="p1">Loan amount: $${amt.toLocaleString()}</p>
+<p class="p1">Rate: ${rate.toFixed(2)}%</p>
+<p class="p1">Term: ${loanTerm} months</p>
+<p class="p1">Payment type: ${paymentType === 'pni' ? 'P&amp;I' : 'Interest Only + Balloon'}</p>
+<p class="p1">Property: ${property}</p>
+<p class="p1">Exit strategy: ${exit_strategy}</p>
+<p class="p1">Experience: ${experience}</p>
+<p class="p1">Deal description: ${deal_desc || 'Not provided'}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Run both AI calls in parallel</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const [aiRes, borrowerRes] = await Promise.all([</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetch('https://api.anthropic.com/v1/messages', {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body: JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">          </span>model: 'claude-sonnet-4-20250514',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>max_tokens: 1000,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>messages: [{ role: 'user', content: summaryPrompt }]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}),</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetch('https://api.anthropic.com/v1/messages', {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body: JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">          </span>model: 'claude-sonnet-4-20250514',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>max_tokens: 1000,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>messages: [{ role: 'user', content: borrowerPrompt }]</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const aiData = await aiRes.json();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const borrowerData = await borrowerRes.json();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const aiSummary = aiData.content?.map(b =&gt; b.text || '').join('') || 'Summary unavailable.';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const borrowerMsg = borrowerData.content?.map(b =&gt; b.text || '').join('') || '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const emailBody = `FIREFLY LENDING — NEW DEAL INQUIRY</p>
+<p class="p1">===============================</p>
+<p class="p2"><br></p>
+<p class="p1">AI DEAL SNAPSHOT:</p>
+<p class="p1">${aiSummary}</p>
+<p class="p2"><br></p>
+<p class="p1">===============================</p>
+<p class="p1">BORROWER DETAILS</p>
+<p class="p1">Name: ${name}</p>
+<p class="p1">Email: ${email}</p>
+<p class="p1">Phone: ${phone || 'Not provided'}</p>
+<p class="p1">Experience: ${experience}</p>
+<p class="p2"><br></p>
+<p class="p1">PROPERTY</p>
+<p class="p1">Address/Area: ${property}</p>
+<p class="p1">Type: ${prop_type}</p>
+<p class="p1">Purchase Price / Value: ${purchase_price}</p>
+<p class="p1">ARV: ${arv}</p>
+<p class="p1">Exit Strategy: ${exit_strategy}</p>
+<p class="p2"><br></p>
+<p class="p1">LOAN TERMS REQUESTED</p>
+<p class="p1">Amount: $${amt.toLocaleString()}</p>
+<p class="p1">Rate: ${rate.toFixed(2)}%</p>
+<p class="p1">Term: ${loanTerm} months</p>
+<p class="p1">Payment Type: ${paymentType === 'pni' ? 'Principal &amp; Interest (Amortizing)' : 'Interest Only + Balloon'}</p>
+<p class="p1">Lien Position: ${lien_pos}</p>
+<p class="p1">Other Lenders: ${other_lenders}</p>
+<p class="p1">Funding Timeline: ${timeline}</p>
+<p class="p2"><br></p>
+<p class="p1">PAYMENT ESTIMATES</p>
+<p class="p1">Monthly Payment: $${Math.round(monthly).toLocaleString()}</p>
+<p class="p1">Total Interest: $${Math.round(totalInterest).toLocaleString()}</p>
+<p class="p1">Points (2 pts): $${Math.round(points).toLocaleString()}</p>
+<p class="p1">Total Cost of Capital: $${Math.round(totalInterest + points).toLocaleString()}</p>
+<p class="p2"><br></p>
+<p class="p1">DEAL DESCRIPTION:</p>
+<p class="p1">${deal_desc || 'Not provided'}</p>
+<p class="p2"><br></p>
+<p class="p1">===============================</p>
+<p class="p1">Submitted via Firefly Lending inquiry form.`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Show borrower-facing preliminary response</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'status-msg success';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.innerHTML = `&lt;strong style="color:var(--gold-pale); display:block; margin-bottom:10px;"&gt;Inquiry Received&lt;/strong&gt;${borrowerMsg.replace(/\n/g, '&lt;br&gt;')}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent = 'Inquiry Submitted';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Post silently to Formspree (replace YOUR_FORM_ID with your actual Formspree endpoint)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fetch('https://formspree.io/f/xqejwwad', {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body: JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">        </span>name, email, phone, experience,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>property, prop_type, purchase_price, arv, exit_strategy,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loan_amount: amt, rate: rate.toFixed(2), term: loanTerm,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>payment_type: paymentType, lien_pos, other_lenders, timeline,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>deal_description: deal_desc,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>monthly_payment: Math.round(monthly),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>total_interest: Math.round(totalInterest),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>points: Math.round(points),</p>
+<p class="p1"><span class="Apple-converted-space">        </span>ai_summary: aiSummary,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>_gotcha: '',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>_subject: `Firefly Lending Inquiry: ${name} — $${Math.round(amt/1000)}K / ${loanTerm}mo`</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}).catch(() =&gt; {}); // silent fail — borrower experience is not affected</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>console.error(err);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.className = 'status-msg success';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.innerHTML = `&lt;strong style="color:var(--gold-pale); display:block; margin-bottom:8px;"&gt;Inquiry Received&lt;/strong&gt;Thank you, ${name}. Your inquiry has been received and will be reviewed personally by Mark Watkins. You can expect a response within 48 hours. Please note that all loan inquiries are subject to independent underwriting review and final approval at the sole discretion of the lender.`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>status.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent = 'Inquiry Submitted';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
